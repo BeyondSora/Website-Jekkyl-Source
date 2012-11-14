@@ -26,15 +26,15 @@ a:hover{color:#005580;text-decoration:underline;}
 .span1{width:60px;}
 .span2{width:140px;}
 .span3{width:220px;}
-.span4{width:220px;}
+.span4{width:200px;}
 .span5{width:380px;}
 .span6{width:460px;}
 .span7{width:540px;}
 .span8{width:580px;}
 .span9{width:700px;}
 .span10{width:780px;}
-.span11{width:820px;}
-.span12,.container{width:820px;}
+.span11{width:800px;}
+.span12,.container{width:800px;}
 .offset1{margin-left:100px;}
 .offset2{margin-left:180px;}
 .offset3{margin-left:260px;}
@@ -44,7 +44,7 @@ a:hover{color:#005580;text-decoration:underline;}
 .offset7{margin-left:580px;}
 .offset8{margin-left:660px;}
 .offset9{margin-left:740px;}
-.offset10{margin-left:820px;}
+.offset10{margin-left:800px;}
 .offset11{margin-left:900px;}
 .row-fluid{width:100%;*zoom:1;}.row-fluid:before,.row-fluid:after{display:table;content:"";}
 .row-fluid:after{clear:both;}
@@ -62,7 +62,7 @@ a:hover{color:#005580;text-decoration:underline;}
 .row-fluid>.span10{width:82.97872339599999%;}
 .row-fluid>.span11{width:91.489361693%;}
 .row-fluid>.span12{width:99.99999998999999%;}
-.container{width:820px; margin-left:auto;margin-right:auto;*zoom:1;}.container:before,.container:after{display:table;content:"";}
+.container{width:800px; margin-left:auto;margin-right:auto;*zoom:1;}.container:before,.container:after{display:table;content:"";}
 .container:after{clear:both;}
 .container-fluid{padding-left:20px;padding-right:20px;*zoom:1;}.container-fluid:before,.container-fluid:after{display:table;content:"";}
 .container-fluid:after{clear:both;}
@@ -143,7 +143,7 @@ input[class*="span"],select[class*="span"],textarea[class*="span"],.uneditable-i
 input.span1,textarea.span1,.uneditable-input.span1{width:50px;}
 input.span2,textarea.span2,.uneditable-input.span2{width:130px;}
 input.span3,textarea.span3,.uneditable-input.span3{width:210px;}
-input.span4,textarea.span4,.uneditable-input.span4{width:210;}
+input.span4,textarea.span4,.uneditable-input.span4{width:190;}
 input.span5,textarea.span5,.uneditable-input.span5{width:370px;}
 input.span6,textarea.span6,.uneditable-input.span6{width:450px;}
 input.span7,textarea.span7,.uneditable-input.span7{width:530px;}
@@ -211,7 +211,7 @@ table{max-width:100%;border-collapse:collapse;border-spacing:0;}
 table .span1{float:none;width:44px;margin-left:0;}
 table .span2{float:none;width:124px;margin-left:0;}
 table .span3{float:none;width:204px;margin-left:0;}
-table .span4{float:none;width:284px;margin-left:0;}
+table .span4{float:none;width:190;margin-left:0;}
 table .span5{float:none;width:364px;margin-left:0;}
 table .span6{float:none;width:444px;margin-left:0;}
 table .span7{float:none;width:524px;margin-left:0;}

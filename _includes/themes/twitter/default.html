@@ -19,7 +19,8 @@
     <!-- Le fav and touch icons -->
 
     <!-- Javascript -->
-    <script type="text/javascript" src="assets/javascript/jquery.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/../../javascript/jquery.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/../../javascript/jquery.stickyscroll.js"></script>
     <script type="text/javascript">
     </script>
     <!-- Update these with your own images
@@ -59,6 +60,24 @@
       </footer>
 
     </div> <!-- /container -->
+
+    <script>
+        $(document).ready(function() {
+            $('.navbar').stickyScroll({ container: '.content' });
+            /*
+            var topbar = $('.navbar'), topOffset = $('.container').offset().top;
+            $(window).scroll(function() {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > topOffset) {
+                    topbar.css('top', scrollTop - topOffset);
+                }
+                else {
+                    topbar.css('top', '');
+                }
+            });
+            */
+        });
+    </script>
 
     {% include JB/analytics %}
   </body>

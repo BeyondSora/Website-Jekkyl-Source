@@ -1,12 +1,56 @@
 ---
 layout: home_page
-title: Hello World!
-tagline: Supporting tagline
+title: Beyond the Blue Sky
+tagline: Life & Programming
 ---
 {% include JB/setup %}
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<div class="row">
+  <div class="span8">
+
+    <div class="accordion" id="accordion2">
+
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle"
+             data-toggle="collapse"
+             data-parent="#accordion2"
+             href="#collapseOne">Collapsible Group Item #1</a>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse in">
+          <div class="accordion-inner">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div> <!-- /accordion-group -->
+
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle"
+             data-toggle="collapse"
+             data-parent="#accordion2"
+             href="#collapseTwo">Collapsible Group Item #2</a>
+        </div>
+        <div id="collapseTwo" class="accordion-body collapse">
+          <div class="accordion-inner">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div> <!-- /accordion-group -->
+
+    </div> <!-- /accordion -->
+
+  </div> <!-- /span8 -->
+
+  <div class="span4">
+    <h4>Recent Posts</h4>
+    <ul class="posts">
+      {% for post in site.posts limit:5 %}
+      <li>
+        <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><br>
+        <span style="margin-left: 80px;">&laquo; {{ post.date | date_to_string }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

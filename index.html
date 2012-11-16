@@ -43,14 +43,16 @@ tagline: Life & Programming
   </div> <!-- /span8 -->
 
   <div class="span4">
-    <h4>Recent Posts</h4>
+    <h4 style="text-align: right;">Recent Posts</h4>
+    <hr>
     <ul class="posts">
       {% for post in site.posts limit:5 %}
       <li>
         <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><br>
-        <span style="margin-left: 80px;">&laquo; {{ post.date | date_to_string }}</span>
+        <span style="margin-left: 90px;">&laquo; {{ post.date | date_to_string }}</span>
       </li>
       {% endfor %}
     </ul>
+    <hr>
   </div>
 </div>

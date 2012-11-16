@@ -1,0 +1,39 @@
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if group == null or group == node.group %}
+      {% if page.url == node.url %}
+        {% assign isActive = 'active' %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if isActive == 'active' %}
+<li class="dropdown active">
+{% else %}
+<li class="dropdown">
+{% endif %}
+{% assign isActive = nil %}
+
+<a href="#" class="dropdown-toggle"
+  data-toggle="dropdown">{{ tab_name }} <b class="caret"></b></a>
+<ul class="dropdown-menu">
+
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if group == null or group == node.group %}
+      {% if page.url == node.url %}
+      <li class="active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+      {% else %}
+      <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+</ul>
+</li>
+
+{% assign tab_name = nil %}
+{% assign pages_list = nil %}
+{% assign group = nil %}

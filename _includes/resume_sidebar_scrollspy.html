@@ -1,0 +1,14 @@
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if page.title == 'Resume' %}
+      {% assign isResume = 'true' %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if isResume == 'true' %}
+data-spy="scroll" data-target="#resume_sidebar"
+{% endif %}
+{% assign isResume = nil %}
+
+{% assign pages_list = nil %}

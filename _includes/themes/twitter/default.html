@@ -31,7 +31,8 @@
     -->
   </head>
 
-  <body>
+  {% assign pages_list = site.pages %}
+  <body {% include resume_sidebar_scrollspy.html %}>
 
     {% include navbar.html %}
 

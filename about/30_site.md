@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: page
 title: About This Site
 tagline:
 group: about

@@ -6,6 +6,5 @@ tagline: "privilege of a selected few"
 category: [Programming]
 tags: [C++ 11, Rvalue, Reference]
 ---
-{% include JB/setup %}
 
 This is a post in progress.

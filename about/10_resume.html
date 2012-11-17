@@ -7,6 +7,43 @@ group: about
 
 <script>
   $(document).ready(function () {
+
+    $('#toggleSkills').click(function () {
+      if ($('#collapseSkills2').hasClass('in') &&
+          $('#collapseSkills2').css('height') != '0px' ) {
+        $('#toggleIconSkills2').addClass('icon-chevron-down').removeClass('icon-chevron-up');
+      }
+      else if (!$('#collapseSkills1').has('in')) {
+        $('#toggleIconSkills2').addClass('icon-chevron-up').removeClass('icon-chevron-down');
+      }
+      if ($('#collapseSkills1').hasClass('in') &&
+          $('#collapseSkills1').css('height') != '0px' ) {
+        $('#toggleIconSkills1').addClass('icon-chevron-down').removeClass('icon-chevron-up');
+      }
+      else if (!$('#collapseSkills2').has('in') ||
+                $('#collapseSkills1').css('height') == '0px') {
+        $('#toggleIconSkills1').addClass('icon-chevron-up').removeClass('icon-chevron-down');
+      }
+    });
+
+    $('#toggleSkills2').click(function () {
+      if ($('#collapseSkills1').hasClass('in') &&
+          $('#collapseSkills1').css('height') != '0px' ) {
+        $('#toggleIconSkills1').addClass('icon-chevron-down').removeClass('icon-chevron-up');
+      }
+      else if (!$('#collapseSkills2').has('in')) {
+        $('#toggleIconSkills1').addClass('icon-chevron-up').removeClass('icon-chevron-down');
+      }
+      if ($('#collapseSkills2').hasClass('in') &&
+          $('#collapseSkills2').css('height') != '0px' ) {
+        $('#toggleIconSkills2').addClass('icon-chevron-down').removeClass('icon-chevron-up');
+      }
+      else if (!$('#collapseSkills1').has('in') ||
+                $('#collapseSkills2').css('height') == '0px') {
+        $('#toggleIconSkills2').addClass('icon-chevron-up').removeClass('icon-chevron-down');
+      }
+    });
+
   });
 </script>
 
@@ -28,38 +65,92 @@ group: about
 </div>
 
 <div class="span7 pull-right">
+
   <div id="skill_sum">
     <hr>
     <h3 style="text-align: right;">SKILLS SUMMARY</h3>
     <hr>
     <ul>
       <li>
-      Very strong knowledge in C++.<br>
-      <font class="muted">
+      Very strong knowledge in C++.
+      <dd class="muted">
         <abbr title="Resource Allocation Is Initialization">RAII</abbr>,
         Template Tricks, etc.
-      </font>
+      </dd>
       </li>
       <li>
-      Excellent knowledge in embedded programming.<br>
-      <font class="muted">Boot rom development in C and arm assembly.</font>
+      Excellent knowledge in embedded programming.
+      <dd class="muted">Low level development in C and arm assembly.</dd>
       </li>
       <li>
-      Solid experience with a variety of programming languages and technologies.<br>
-      <font class="muted">Python, Ruby, Make, GDB, Latex, Markdown, Jekyll, etc.</font>
+      Solid experience with a variety of programming languages and technologies.
+      <dd class="muted">Python, Ruby, Make, GDB, Latex, Markdown, Jekyll, etc.</dd>
       </li>
     </ul>
-  </div>
+    <div class="accordion" id="accordion2">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle"
+             id="toggleSkills"
+             data-toggle="collapse"
+             data-parent="#accordion2"
+             href="#collapseSkills1">More <i id="toggleIconSkills1"
+             class="icon-chevron-up"></i></a>
+        </div>
+        <div id="collapseSkills1" class="accordion-body collapse in">
+          <div class="accordion-inner">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div> <!-- /accordion-group -->
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle"
+             id="toggleSkills2"
+             data-toggle="collapse"
+             data-parent="#accordion2"
+             href="#collapseSkills2">More <i id="toggleIconSkills2"
+             class="icon-chevron-down"></i></a>
+        </div>
+        <div id="collapseSkills2" class="accordion-body collapse">
+          <div class="accordion-inner">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div> <!-- /accordion-group -->
+    </div> <!-- /accordion -->
+  </div> <!-- /skill_sum -->
+
   <div id="tech_exp">
     <hr>
     <h3 style="text-align: right;">TECHNICAL EXPERIENCE</h3>
     <hr>
-    <p>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </p>
+    <table class="table table-bordered">
+      <tr>
+        <td><strong>Programming Languages</strong></td>
+        <td>C, C++, Rust, Java, C#, Visual Basic, Ruby, Python</td>
+      </tr>
+      <tr>
+        <td><strong>Web Technologies</strong></td>
+        <td>HTML, jQuery, Jekyll, Ruby on Rails</td>
+      </tr>
+      <tr>
+        <td><strong>Mobile</strong></td>
+        <td>Android</td>
+      </tr>
+      <tr>
+        <td><strong>IDE/Editors</strong></td>
+        <td>Vim, Visual Studio, Qt Creator, Eclipse</td>
+      </tr>
+      <tr>
+        <td><strong>Version Control</strong></td>
+        <td>Git, Perforce, CVS</td>
+      </tr>
+      <tr>
+        <td><strong>Operating Systems</strong></td>
+        <td>Linux, Solaris, AIX, HP-UX, Windows</td>
+      </tr>
+    </table>
   </div>
   <div id="person_proj">
     <hr>

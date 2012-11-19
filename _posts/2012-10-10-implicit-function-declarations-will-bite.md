@@ -215,7 +215,7 @@ Only can a programmer immediately spot bugs introduced by the implicit function 
 if he/she understands it well enough. Same can be said to other legacy features in C.
 
 
-
+<hr>
 \*<sup>1</sup> Implicit function declaration is no longer supported as of C99.
 <a id="f1" href="#ref_f1">&#8617;</a>
 

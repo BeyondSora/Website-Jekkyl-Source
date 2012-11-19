@@ -68,4 +68,11 @@ html, body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	
+
+/* My own settings */
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+    width: 800px;
+}

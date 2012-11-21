@@ -1,4 +1,4 @@
-@import "pygments.css"
+@import url("pygments.css")
 
 .sidebar-nav {
     padding: 9px 0;
@@ -14,4 +14,18 @@
     .sidebar-nav-fixed {
         width:auto;
     }
+}
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+    width: 800px;
+}
+
+code {
+    color: #333;
+    font-size: 12px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }

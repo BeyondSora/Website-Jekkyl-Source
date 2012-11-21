@@ -6,7 +6,7 @@
 }
 
 .sidebar-nav-fixed {
-    position: fixed;
+    position: auto;
     width:200px;
 }
 

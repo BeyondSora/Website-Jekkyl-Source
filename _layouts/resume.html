@@ -4,7 +4,7 @@ theme :
 layout: about
 ---
 
-<div class="span4">
+<div class="span3">
   <div class="well sidebar-nav sidebar-nav-fixed" id="resume_sidebar">
     <ul class="nav nav-list">
       <li><h2>Jimmy Lu</h2></li>
@@ -26,3 +26,21 @@ layout: about
   {{ content }}
 
 </div>
+
+<script>
+  $(document).ready(function () {
+      $(window).scroll(function (event) {
+          var scrollTop = $(this).scrollTop();
+          if (scrollTop > 60) {
+              $('#resume_sidebar').css('position', "fixed");
+              $('#resume_sidebar').css('top', function () {
+                  return ($("#topbar").height() + 20) + 'px';
+              });
+          }
+          else {
+              $('#resume_sidebar').css('position', "relative");
+              $('#resume_sidebar').css('top', "0");
+          }
+      });
+  });
+</script>

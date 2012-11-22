@@ -134,6 +134,9 @@ group: about
       </td>
     </tr>
   </table>
+  <div>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+  </div>
 </div> <!-- /tech_exp -->
 
 
@@ -155,6 +158,9 @@ group: about
     <div class="accordion-group">
       <!-- Personal Website -->
       <div class="accordion-heading">
+        <p class="collapseLabel">
+        <span class="label label-success">Active</span>
+        </p>
         <a class="accordion-toggle"
            id="togglePersonProj"
            data-toggle="collapse"
@@ -164,9 +170,6 @@ group: about
       <div id="collapsePersonProj1" class="accordion-body collapse">
         <div class="accordion-inner">
           <!-- Project Description -->
-          <p style="float: right; margin: 5px;">
-          <span class="label label-success">Active</span>
-          </p>
           <p>This is a placeholder.</p>
           <p>This is a placeholder.</p>
           <p>This is a placeholder.</p>
@@ -177,6 +180,9 @@ group: about
     <div class="accordion-group">
       <!-- Graph Program -->
       <div class="accordion-heading">
+        <p class="collapseLabel">
+        <span class="label label-success">Active</span>
+        </p>
         <a class="accordion-toggle"
            id="togglePersonProj2"
            data-toggle="collapse"
@@ -186,9 +192,6 @@ group: about
       <div id="collapsePersonProj2" class="accordion-body collapse in">
         <div class="accordion-inner">
           <!-- Project Description -->
-          <p style="float: right; margin: 5px;">
-          <span class="label label-success">Active</span>
-          </p>
           <p>
           <strong>Graph</strong> is a program which builds simple graphs as defined
           in the graph theory section of MATH239 at the University of Waterloo.
@@ -217,6 +220,9 @@ group: about
     <div class="accordion-group">
       <!-- Cool Stuff -->
       <div class="accordion-heading">
+        <p class="collapseLabel">
+        <span class="label label-success">Active</span>
+        </p>
         <a class="accordion-toggle"
            id="togglePersonProj3"
            data-toggle="collapse"
@@ -226,9 +232,6 @@ group: about
       <div id="collapsePersonProj3" class="accordion-body collapse">
         <div class="accordion-inner">
           <!-- Project Description -->
-          <p style="float: right; margin: 5px;">
-          <span class="label label-success">Active</span>
-          </p>
           <p>
           <strong>Interesting</strong> tidbits of code are what this repository contains.
           I started this project as I wanted to record the not-so-obvious stuff that
@@ -257,6 +260,9 @@ group: about
     <div class="accordion-group">
       <!-- Wlpp-Plus Compiler -->
       <div class="accordion-heading">
+        <p class="collapseLabel">
+        <span class="label">On Hold</span>
+        </p>
         <a class="accordion-toggle"
            id="togglePersonProj4"
            data-toggle="collapse"
@@ -266,9 +272,6 @@ group: about
       <div id="collapsePersonProj4" class="accordion-body collapse">
         <div class="accordion-inner">
           <!-- Project Description -->
-          <p style="float: right; margin: 5px;">
-          <span class="label">On Hold</span>
-          </p>
           <p>
           <strong>Wlpp+</strong> is a simple, easy to use language similar to C.
           The idea came from the compiler project from CS241 from my university.
@@ -318,11 +321,15 @@ group: about
     <div class="accordion-group">
       <!-- RIM -->
       <div class="accordion-heading">
+        <p class="collapseLabel coop"
+           data-original-title="Co-operative Education">
+        <span class="coop label label-info">Co-op</span>
+        </p>
         <a class="accordion-toggle"
            id="toggleWorkExp"
            data-toggle="collapse"
            data-parent="#accordionWorkExp"
-           href="#collapseWorkExp1">Research In Motion (Co-op)</a>
+           href="#collapseWorkExp1">Research In Motion</a>
       </div>
       <div id="collapseWorkExp1" class="accordion-body collapse">
         <div class="accordion-inner">
@@ -355,11 +362,15 @@ group: about
     <div class="accordion-group">
       <!-- EMC -->
       <div class="accordion-heading">
+        <p class="collapseLabel coop"
+           data-original-title="Co-operative Education">
+        <span class="label label-info">Co-op</span>
+        </p>
         <a class="accordion-toggle"
            id="toggleWorkExp2"
            data-toggle="collapse"
            data-parent="#accordionWorkExp"
-           href="#collapseWorkExp2">EMC Corporation (Co-op)</a>
+           href="#collapseWorkExp2">EMC Corporation</a>
       </div>
       <div id="collapseWorkExp2" class="accordion-body collapse in">
         <div class="accordion-inner">
@@ -416,11 +427,15 @@ group: about
     <div class="accordion-group">
       <!-- PRGX -->
       <div class="accordion-heading">
+        <p class="collapseLabel coop"
+           data-original-title="Co-operative Education">
+        <span class="coop label label-info">Co-op</span>
+        </p>
         <a class="accordion-toggle"
            id="toggleWorkExp3"
            data-toggle="collapse"
            data-parent="#accordionWorkExp"
-           href="#collapseWorkExp3">PRGX (Co-op)</a>
+           href="#collapseWorkExp3">PRGX</a>
       </div>
       <div id="collapseWorkExp3" class="accordion-body collapse">
         <div class="accordion-inner">
@@ -642,3 +657,9 @@ group: about
   <!-- Placement Hack to get the sidebar highlight work better -->
   <hr>
   <br>
+
+<script>
+  $(document).ready(function () {
+    $('.coop').tooltip({'placement':'left'});
+  });
+</script>

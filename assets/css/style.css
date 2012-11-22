@@ -1,4 +1,5 @@
-@import url("pygments.css")
+@import url('pygments.css');
+@import url('imported_bootstrap.css');
 
 .sidebar-nav {
     padding: 9px 0;
@@ -44,3 +45,13 @@ code {
     font-family:verdana;
     font-size:11px;
 }
+
+.collapseLabel {
+    float: right;
+    margin: 7px;
+}
+
+a:link.label-button,
+a:visited.label-button,
+a:hover.label-button,
+a:active.label-button { color: white; text-decoration: none}

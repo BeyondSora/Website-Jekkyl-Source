@@ -1,22 +1,6 @@
 @import url('pygments.css');
 @import url('imported_bootstrap.css');
 
-.sidebar-nav {
-    padding: 9px 0;
-    width:200px;
-}
-
-.sidebar-nav-fixed {
-    position: auto;
-    width:200px;
-}
-
-@media (max-width: 767px) {
-    .sidebar-nav-fixed {
-        width:auto;
-    }
-}
-
 .container,
 .navbar-static-top .container,
 .navbar-fixed-top .container,
@@ -55,3 +39,7 @@ a:link.label-button,
 a:visited.label-button,
 a:hover.label-button,
 a:active.label-button { color: white; text-decoration: none}
+
+#LabelMeaning {
+    position: fixed;
+}

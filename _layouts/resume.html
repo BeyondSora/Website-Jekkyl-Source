@@ -5,7 +5,7 @@ layout: about
 ---
 
 <div class="span3">
-  <div class="well sidebar-nav sidebar-nav-fixed" id="resume_sidebar">
+  <div class="well" id="resume_sidebar" style="width: 180px;">
     <ul class="nav nav-list">
       <li><h2>Jimmy Lu</h2></li>
       <li class="nav-header">Personal</li>
@@ -19,6 +19,11 @@ layout: about
       <li class=""><a href="#edu">Education</a></li>
     </ul>
   </div><!--/.well -->
+  <div class="well" id="LabelMeaning" style="width: 180px;">
+    <span class="label label-important">Red</span>
+    denotes what I'm most familiar and comfortable with.
+  </div><!--/.well -->
+
 </div>
 
 <div class="span7 pull-right">
@@ -30,6 +35,14 @@ layout: about
 <script>
   var inAnimation = false;
   $(document).ready(function () {
+
+    // Default stuff
+    $('#LabelMeaning').hide();
+    var newHeight = ($("#resume_sidebar").offset().top +
+                     $("#resume_sidebar").height() + 20) + 'px';
+    $('#LabelMeaning').css('top', newHeight);
+
+    // Sidebar Animation
     $(window).scroll(function (event) {
       var scrollTop = $(this).scrollTop();
       if (scrollTop > 60 && inAnimation == false) {
@@ -69,6 +82,17 @@ layout: about
         inAnimation = false;
         $('#resume_sidebar').css('position', "relative");
         $('#resume_sidebar').css('top', "0");
+      }
+    }); // Sidebar Animation
+
+    // LabelMeaning Animation
+    $(window).scroll(function (event) {
+      var scrollTop = $(this).scrollTop();
+      if (scrollTop > ($('#tech_exp').offset().top - 40)) {
+          $('#LabelMeaning').fadeIn();
+      }
+      else {
+          $('#LabelMeaning').fadeOut();
       }
     });
   });

@@ -25,16 +25,36 @@
     {% include JB/comments %}
   </div>
   
-  <div class="span3" style="width:200px;">
+  <div class="span3" id="post_sidebar" style="width:200px;">
     <h4>Published</h4>
     <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
 
-  {% unless page.tags == empty %}
+    {% unless page.tags == empty %}
     <h4 style="margin-top: 10px;">Tags</h4>
     <ul class="tag_box">
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
     </ul>
-  {% endunless %}  
+    {% endunless %}
+
+    <div id="toTop">^ Back to Top</div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function () {
+    $('#toTop').css('left', $('#post_sidebar').offset().left + 40);
+    $(window).scroll(function() {
+      if($(this).scrollTop() != 0) {
+        $('#toTop').fadeIn();
+      }
+      else {
+        $('#toTop').fadeOut();
+      }
+    });
+
+    $('#toTop').click(function() {
+      $('body,html').animate({scrollTop:0},800);
+    });
+  });
+</script>

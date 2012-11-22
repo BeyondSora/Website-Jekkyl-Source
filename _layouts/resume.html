@@ -28,19 +28,48 @@ layout: about
 </div>
 
 <script>
+  var inAnimation = false;
   $(document).ready(function () {
-      $(window).scroll(function (event) {
-          var scrollTop = $(this).scrollTop();
-          if (scrollTop > 60) {
-              $('#resume_sidebar').css('position', "fixed");
-              $('#resume_sidebar').css('top', function () {
-                  return ($("#topbar").height() + 20) + 'px';
-              });
-          }
-          else {
+    $(window).scroll(function (event) {
+      var scrollTop = $(this).scrollTop();
+      if (scrollTop > 60 && inAnimation == false) {
+        inAnimation = true;
+
+        $('#resume_sidebar').css('position', "fixed");
+
+        var newHeight = ($("#topbar").height() + 20) + 'px';
+
+        $('#resume_sidebar').animate({
+          top: newHeight,
+        },
+        { duration: 500,
+          step: function () {
+            // If user scrolls back up right away
+            // Go back to original location
+            scrollTop = $(window).scrollTop();
+            if (scrollTop <= 60) {
+              // Great trick to "stop the animation",
+              // Do animation on the same element again with queue: false
+              // and assigning it to its current value with duration 0
+              // to override previous animation
+              $('#resume_sidebar').animate({
+                top: $('#resume_sidebar').top()},
+                {duration: 0, queue: false}
+              );
+
+              // Resume to relative positioning
               $('#resume_sidebar').css('position', "relative");
               $('#resume_sidebar').css('top', "0");
+              inAnimation = false;
+            }
           }
-      });
+        });
+      }
+      else if (scrollTop <= 60) {
+        inAnimation = false;
+        $('#resume_sidebar').css('position', "relative");
+        $('#resume_sidebar').css('top', "0");
+      }
+    });
   });
 </script>

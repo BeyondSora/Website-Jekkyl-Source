@@ -19,10 +19,18 @@ layout: about
       <li class=""><a href="#edu">Education</a></li>
     </ul>
   </div><!--/.well -->
-  <div class="well" id="LabelMeaning" style="width: 180px;">
-    <span class="label label-important">Red</span>
-    denotes what I'm most familiar and comfortable with.
-  </div><!--/.well -->
+
+  <div class="alert SidebarFix" id="LabelMeaning" style="width: 190px;">
+    <a class="close" data-dismiss="alert">x</a>
+    <h4 class="alert-heading"><span class="label label-important">Red</span></h4>
+    denotes what I'm most proficient and comfortable at.
+  </div>
+
+  <div class="alert alert-info SidebarFix" id="Info" style="width: 190px;">
+    <h4 class="alert-heading"><span id="InfoHeader">Info</span></h4>
+    <span id="InfoContent">
+    </span>
+  </div>
 
 </div>
 
@@ -37,10 +45,13 @@ layout: about
   $(document).ready(function () {
 
     // Default stuff
+    $('#LabelMeaning').css('top', ($("#resume_sidebar").offset().top +
+                                   $("#resume_sidebar").height() + 40) + 'px');
+    $('#Info').css('top', ($("#LabelMeaning").offset().top +
+                           $("#LabelMeaning").height() + 40) + 'px');
+
     $('#LabelMeaning').hide();
-    var newHeight = ($("#resume_sidebar").offset().top +
-                     $("#resume_sidebar").height() + 20) + 'px';
-    $('#LabelMeaning').css('top', newHeight);
+    $('#Info').hide();
 
     // Sidebar Animation
     $(window).scroll(function (event) {
@@ -87,8 +98,9 @@ layout: about
 
     // LabelMeaning Animation
     $(window).scroll(function (event) {
+      $('#Info').fadeOut();
       var scrollTop = $(this).scrollTop();
-      if (scrollTop > ($('#tech_exp').offset().top - 40)) {
+      if (scrollTop > ($('#tech_exp').offset().top - 60)) {
           $('#LabelMeaning').fadeIn();
       }
       else {

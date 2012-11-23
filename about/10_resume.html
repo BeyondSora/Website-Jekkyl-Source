@@ -373,7 +373,7 @@ group: about
       <!-- EMC -->
       <div class="accordion-heading">
         <p class="collapseLabel">
-        <span class="label label-warning">Co-op</span>
+        <span class="coop label label-warning">Co-op</span>
         </p>
         <a class="accordion-toggle"
            id="toggleWorkExp2"
@@ -453,7 +453,7 @@ group: about
       <!-- PRGX -->
       <div class="accordion-heading">
         <p class="collapseLabel">
-        <span class="label label-warning">Co-op</span>
+        <span class="coop label label-warning">Co-op</span>
         </p>
         <a class="accordion-toggle"
            id="toggleWorkExp3"
@@ -699,5 +699,14 @@ group: about
 
 <script>
   $(document).ready(function () {
+    $('.coop').click(function (event) {
+      var header = "Co-op Term";
+      var content = "Co-op terms are the work terms from co-operative education.<br>" +
+                    "<strong>Co-operative eudcation</strong> is a program in which academic " +
+                    "terms alternate with work terms forming study/work sequences.";
+      $('#InfoHeader').html(header);
+      $('#InfoContent').html(content);
+      $('#Info').fadeIn();
+    });
   });
 </script>

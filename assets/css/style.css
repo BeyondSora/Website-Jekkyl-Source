@@ -40,6 +40,9 @@ a:visited.label-button,
 a:hover.label-button,
 a:active.label-button { color: white; text-decoration: none}
 
-#LabelMeaning {
+.SidebarFix {
     position: fixed;
+    color:#333;
+    font-family:verdana;
+    font-size:11px;
 }

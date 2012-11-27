@@ -1,4 +1,4 @@
-@import url('pygments.css');
+@import url('pygments/default.css');
 @import url('imported_bootstrap.css');
 
 .container,
@@ -13,6 +13,10 @@ code {
     font-size: 12px;
     padding-top: 0px;
     padding-bottom: 0px;
+}
+
+code.highlight {
+    font-size: 13px;
 }
 
 #toTop {

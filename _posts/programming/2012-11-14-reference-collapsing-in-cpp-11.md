@@ -18,7 +18,7 @@ But when it's in the form of `T&`, an lvalue reference to a template type parame
 it always collapses into a reference to an lvalue.
 
 The rule for an rvalue reference to a template type parameter, `T&&`, is more confusing.
-It can expand to either an lvalue reference or an rvalue reference.
+It can collapse into either an lvalue reference or an rvalue reference.
 For `T` is an lvalue `S` or an rvalue reference `S&&`,
 `T&&` becomes a reference to an rvalue,
 and when `T` is an lvalue reference `S&`, `T&&` becomes a reference to an lvalue.

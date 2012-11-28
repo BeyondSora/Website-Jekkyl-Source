@@ -27,26 +27,31 @@ The following table summarizes the rules:
 
 <table class="table table-condensed table-bordered" style="width: 400px;">
 <tr class="success">
-<td><code>T</code><span class="label pull-right">type</span></td>
-<td><code>T&amp;</code><span class="label pull-right">lvalue ref</span></td>
-<td><code>T&amp;&amp;</code><span class="label pull-right">rvalue ref</span></td>
+<td><span class="label pull-left">type</span></td>
+<td><span class="label pull-left">lvalue</span></td>
+<td><span class="label pull-left">lvalue ref</span></td>
+<td><span class="label pull-left">rvalue ref</span></td>
 </tr>
 <tr class="info">
+<td></td>
 <td colspan="3" style="text-align: center;">
 <strong>Collapses Into</strong>
 </td>
 </tr>
 <tr>
+<td><code>T</code></td>
 <td><code>int</code></td>
 <td><code>int&amp;</code></td>
 <td><code>int&amp;&amp;</code></td>
 </tr>
 <tr>
+<td><code>T&amp;</code></td>
 <td><code>int&amp;</code></td>
 <td><code>int&amp;</code></td>
 <td><code>int&amp;</code></td>
 </tr>
 <tr>
+<td><code>T&amp;&amp;</code></td>
 <td><code>int&amp;&amp;</code></td>
 <td><code>int&amp;</code></td>
 <td><code>int&amp;&amp;</code></td>

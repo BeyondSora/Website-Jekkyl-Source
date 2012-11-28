@@ -89,10 +89,10 @@ void foo () {
     vector<StudentGrade> grades = getGrades();
     forward(grades);        // calls process(vector<StudentGrade> &grades);
 
-    vector<StudentGrade> &lRefGrades = grades;
-    forward(lRefGrades);    // calls process(vector<StudentGrade> &grades);
+    vector<StudentGrade> &LRefGrades = grades;
+    forward(LRefGrades);    // calls process(vector<StudentGrade> &grades);
 
-    vector<StudentGrade> &&RRefGrades = grades;
+    vector<StudentGrade> &&RRefGrades = std::move(grades);
     forward(RRefGrades);    // calls process(vector<StudentGrade> &&grades);
 }
 {% endhighlight %}

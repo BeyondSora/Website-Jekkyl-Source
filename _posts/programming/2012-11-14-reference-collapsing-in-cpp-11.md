@@ -12,13 +12,20 @@ whether a reference to a type is deduced to be a reference to an `lvalue` or `rv
 It is a very interesting part of C++11 as it is an operation that only the compiler can perform.
 It also plays a key part in the composition of higher order functions.
 
-The rules are as follows:
+The rules are such that a template type parameter `T` can be expanded to
+either an lvalue, a reference to an lvalue, or a reference to an rvalue.
+But when it's an lvalue reference to a template type parameter, `T&`,
+it always expands to a reference to an lvalue.
+On the other hand, `T&&` can expand to either a reference to an lvalue or
+a reference to an rvalue.
+
+The following table summarizes the rules:
 
 <table class="table table-condensed table-bordered" style="width: 400px;">
 <tr class="success">
 <td><code>T</code><span class="label pull-right">type</span></td>
-<td><code>T&amp;</code><span class="label pull-right">lvalue</span></td>
-<td><code>T&amp;&amp;</code><span class="label pull-right">rvalue</span></td>
+<td><code>T&amp;</code><span class="label pull-right">lvalue ref</span></td>
+<td><code>T&amp;&amp;</code><span class="label pull-right">rvalue ref</span></td>
 </tr>
 <tr class="info">
 <td colspan="3" style="text-align: center;">
@@ -42,11 +49,11 @@ The rules are as follows:
 </tr>
 </table>
 
-As shown, `lvalue reference` is *infectious* and applying it to any type
+To emphasize, an lvalue reference is *infectious* and applying it to any type
 will turn that type into its own kind.
-On the other hand, `rvalue reference` is less powerful and only captures
+On the other hand, an rvalue reference is less powerful and only captures
 a regular type or another of its own kind.
-A plain non-reference type is the weakest, as expected.
+A plain non-reference type is the weakest, which is expected.
 
 Although the chart shows combinations such as a reference to
 another reference, this is not actually valid syntax
@@ -62,10 +69,11 @@ typedef Type&  LRef_Type;
 typedef Type&& RRef_Type;
 
 void foo () {
-    Type       &a;        // lvalue reference
-    Type      &&b;        // rvalue reference
-    LRef_Type &&c;        // lvalue reference
-    RRef_Type  &d;        // lvalue reference
+    Type        t;
+    Type       &a = t;          // lvalue reference
+    Type      &&b = move(t);    // rvalue reference
+    LRef_Type &&c = t;          // lvalue reference
+    RRef_Type  &d = t;          // lvalue reference
 }
 {% endhighlight %}
 

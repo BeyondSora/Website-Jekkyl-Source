@@ -4,7 +4,7 @@ title: "Reference Collapsing"
 description: "Rvalue and Lvalue. What're the rules to reference collapsing?"
 tagline:
 category: [Programming]
-tags: [C++ 11, Rvalue, Reference]
+tags: [C++11, Rvalue, Reference]
 ---
 
 Reference collapsing is a set of rules dictating
@@ -16,9 +16,14 @@ The rules are as follows:
 
 <table class="table table-condensed table-bordered" style="width: 400px;">
 <tr class="success">
-<td><code>T</code></td>
-<td><code>T&amp;</code></td>
-<td><code>T&amp;&amp;</code></td>
+<td><code>T</code><span class="label pull-right">type</span></td>
+<td><code>T&amp;</code><span class="label pull-right">lvalue</span></td>
+<td><code>T&amp;&amp;</code><span class="label pull-right">rvalue</span></td>
+</tr>
+<tr class="info">
+<td colspan="3" style="text-align: center;">
+<strong>Expands Into</strong>
+</td>
 </tr>
 <tr>
 <td><code>int</code></td>

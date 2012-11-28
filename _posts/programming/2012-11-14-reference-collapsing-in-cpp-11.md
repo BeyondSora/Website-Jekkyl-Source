@@ -87,13 +87,13 @@ The code below shows some uses of such perfect forwarding templates.
 {% highlight c %}
 void foo () {
     vector<StudentGrade> grades = getGrades();
-    process(grades);        // calls process(vector<StudentGrade> &grades);
+    forward(grades);        // calls process(vector<StudentGrade> &grades);
 
     vector<StudentGrade> &lRefGrades = grades;
-    process(lRefGrades);    // calls process(vector<StudentGrade> &grades);
+    forward(lRefGrades);    // calls process(vector<StudentGrade> &grades);
 
     vector<StudentGrade> &&RRefGrades = grades;
-    process(RRefGrades);    // calls process(vector<StudentGrade> &&grades);
+    forward(RRefGrades);    // calls process(vector<StudentGrade> &&grades);
 }
 {% endhighlight %}
 

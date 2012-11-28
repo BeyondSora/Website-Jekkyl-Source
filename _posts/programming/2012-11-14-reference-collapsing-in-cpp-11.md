@@ -92,7 +92,7 @@ void foo () {
     vector<StudentGrade> &LRefGrades = grades;
     forward(LRefGrades);    // calls process(vector<StudentGrade> &grades);
 
-    vector<StudentGrade> &&RRefGrades = std::move(grades);
+    vector<StudentGrade> &&RRefGrades = move(grades);
     forward(RRefGrades);    // calls process(vector<StudentGrade> &&grades);
 }
 {% endhighlight %}

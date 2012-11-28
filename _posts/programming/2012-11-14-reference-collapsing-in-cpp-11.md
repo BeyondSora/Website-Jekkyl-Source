@@ -7,7 +7,7 @@ category: [Programming]
 tags: [C++ 11, Rvalue, Reference]
 ---
 
-Reference collasping is a set of rules dictating
+Reference collapsing is a set of rules dictating
 whether a reference to a type is deduced to be a reference to an `lvalue` or `rvalue`.
 It is a very interesting part of C++11 as it is an operation that only the compiler can perform.
 It also plays a key part in the composition of higher order functions.

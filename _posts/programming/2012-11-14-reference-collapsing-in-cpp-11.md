@@ -8,7 +8,8 @@ tags: [C++11, Rvalue, Reference]
 ---
 
 Reference collapsing is a set of rules dictating
-whether a reference to a type is deduced to be a reference to an `lvalue` or `rvalue`.
+whether a reference to a type is deduced to be a reference to an **lvalue** or
+**rvalue**<sup id="ref_f1"><a href="#f1">1</a></sup>.
 It is a very interesting part of C++11 as it is an operation that only the compiler can perform.
 It also plays a key part in the composition of higher order functions.
 
@@ -86,7 +87,8 @@ void foo () {
 }
 {% endhighlight %}
 
-Reference collasping is also what makes **perfect forwarding** in C++ possible.
+Reference collasping is also what makes
+**perfect forwarding**<sup id="ref_f2"><a href="#f2">2</a></sup> in C++ possible.
 
 {% highlight c %}
 vector<Result> process (vector<StudentGrade> &grades);
@@ -123,3 +125,12 @@ In C++11, reference collapsing are only present in the context of
 `auto`, `decltype`, `typedef`, or a template type parameter.
 The rules are this way largely to make perfect forwarding possible.
 They serve little purpose when applied outside of a template.
+
+<hr>
+\*<sup>1</sup> An excellent article on rvalue and move semantics can be found
+<a href="http://www.cprogramming.com/c++11/rvalue-references-and-move-semantics-in-c++11.html">here</a>.
+<a id="f1" href="#ref_f1">&#8617;</a>
+
+\*<sup>2</sup> Find out more about perfect forwarding and move semantics
+<a href="http://www.codeproject.com/Articles/397492/Move-Semantics-and-Perfect-Forwarding-in-Cplusplus">here</a>.
+<a id="f2" href="#ref_f2">&#8617;</a>

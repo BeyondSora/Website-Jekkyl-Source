@@ -12,12 +12,16 @@ whether a reference to a type is deduced to be a reference to an `lvalue` or `rv
 It is a very interesting part of C++11 as it is an operation that only the compiler can perform.
 It also plays a key part in the composition of higher order functions.
 
-The rules are such that a template type parameter `T` can be expanded to
+The rules are such that a template type parameter `T` can be
 either an lvalue, a reference to an lvalue, or a reference to an rvalue.
-But when it's an lvalue reference to a template type parameter, `T&`,
-it always expands to a reference to an lvalue.
-On the other hand, `T&&` can expand to either a reference to an lvalue or
-a reference to an rvalue.
+But when it's in the form of `T&`, an lvalue reference to a template type parameter,
+it always collapses into a reference to an lvalue.
+
+The rule for an rvalue reference to a template type parameter, `T&&`, is more confusing.
+It can expand to either an lvalue reference or an rvalue reference.
+For `T` is an lvalue `S` or an rvalue reference `S&&`,
+`T&&` becomes a reference to an rvalue,
+and when `T` is an lvalue reference `S&`, `T&&` becomes a reference to an lvalue.
 
 The following table summarizes the rules:
 
@@ -29,7 +33,7 @@ The following table summarizes the rules:
 </tr>
 <tr class="info">
 <td colspan="3" style="text-align: center;">
-<strong>Expands Into</strong>
+<strong>Collapses Into</strong>
 </td>
 </tr>
 <tr>

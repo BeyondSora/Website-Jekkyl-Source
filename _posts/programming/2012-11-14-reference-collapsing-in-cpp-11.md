@@ -128,9 +128,9 @@ They serve little purpose when applied outside of a template.
 
 <hr>
 \*<sup>1</sup> An excellent article on rvalue and move semantics can be found
-<a href="http://www.cprogramming.com/c++11/rvalue-references-and-move-semantics-in-c++11.html">here</a>.
+<a href="http://www.cprogramming.com/c++11/rvalue-references-and-move-semantics-in-c++11.html" target="_blank">here</a>.
 <a id="f1" href="#ref_f1">&#8617;</a>
 
 \*<sup>2</sup> Find out more about perfect forwarding and move semantics
-<a href="http://www.codeproject.com/Articles/397492/Move-Semantics-and-Perfect-Forwarding-in-Cplusplus">here</a>.
+<a href="http://www.codeproject.com/Articles/397492/Move-Semantics-and-Perfect-Forwarding-in-Cplusplus" target="_blank">here</a>.
 <a id="f2" href="#ref_f2">&#8617;</a>

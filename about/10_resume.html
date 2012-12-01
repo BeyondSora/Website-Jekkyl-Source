@@ -155,23 +155,81 @@ group: about
   <div class="accordion" id="accordionPersonProj">
 
     <div class="accordion-group">
-      <!-- Personal Website -->
+      <!-- State Table Generator -->
       <div class="accordion-heading">
         <p class="collapseLabel">
         <span class="label label-success">Active</span>
         </p>
         <a class="accordion-toggle"
-           id="togglePersonProj"
+           id="togglePersonProjStateTable"
            data-toggle="collapse"
            data-parent="#accordionPersonProj"
-           href="#collapsePersonProj1">Personal Website</a>
+           href="#collapsePersonProjStateTable">Compile-time State Table Generator</a>
       </div>
-      <div id="collapsePersonProj1" class="accordion-body collapse">
+      <div id="collapsePersonProjStateTable" class="accordion-body collapse in">
         <div class="accordion-inner">
           <!-- Project Description -->
-          <p>This is a placeholder.</p>
-          <p>This is a placeholder.</p>
-          <p>This is a placeholder.</p>
+          <p>
+          <strong>Header-only</strong> C++ library capable of building state table at compile-time.
+          </p>
+          <p>
+          <p>
+          <strong>The idea</strong> came from the process of building a toeknizer for
+          my <strong>Graph Program</strong> project. I ended up making a compile-time initalized state table
+          for it. As first I had to use a ruby script to generate the table, but later I was
+          able to automatically make the compiler initialize the table during compile-time
+          with the help of recursive and variadic templates.
+          </p>
+          <strong>Performance</strong> should be very good with this library as there is no
+          run time cost at all for creating the table. Everything is pre-computed and the entire
+          table can be loaded into memory right at program start. Another advantae is that
+          the user does not have to write much code to for the table.
+          A State enum and a traversal function are all it needs.
+          </p>
+          <p>
+          For more information, refer to the project page
+          <a href="https://github.com/BeyondSora/State-Table-Generator" target="_blank">here</a>.
+          </p>
+        </div>
+      </div>
+    </div> <!-- /accordion-group -->
+
+    <div class="accordion-group">
+      <!-- Cool Stuff -->
+      <div class="accordion-heading">
+        <p class="collapseLabel">
+        <span class="label label-success">Active</span>
+        </p>
+        <a class="accordion-toggle"
+           id="togglePersonProj3"
+           data-toggle="collapse"
+           data-parent="#accordionPersonProj"
+           href="#collapsePersonProj3">Cool Stuff</a>
+      </div>
+      <div id="collapsePersonProj3" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <!-- Project Description -->
+          <p>
+          <strong>Interesting</strong> tidbits of code from various sources.
+          I started this project as I wanted to record the not-so-obvious stuff that
+          I've come across in programming (mainly C or C++).
+          It turned out to be quite useful as
+          I often refer back to it for my other projects.
+          </p>
+          <p>
+          <strong>My favorites</strong> are
+          <code>Type Erasure</code>, <code>Static Type ID</code>
+          and <code>EnableIf</code> through
+          template meta-programming in C++.
+          Strict-aliasing and <code>restrict</code> keyword optimization in C
+          are also very interesting as they demonstrate how compilers optimize
+          at the assembly level.
+          Also, there is a fun demo of a LFSR pseudo-random generator.
+          </p>
+          <p>
+          For more information, refer to the project page
+          <a href="https://github.com/BeyondSora/Cool-Stuff" target="_blank">here</a>.
+          </p>
         </div>
       </div>
     </div> <!-- /accordion-group -->
@@ -188,7 +246,7 @@ group: about
            data-parent="#accordionPersonProj"
            href="#collapsePersonProj2">Graph Program</a>
       </div>
-      <div id="collapsePersonProj2" class="accordion-body collapse in">
+      <div id="collapsePersonProj2" class="accordion-body collapse">
         <div class="accordion-inner">
           <!-- Project Description -->
           <p>
@@ -217,41 +275,23 @@ group: about
     </div> <!-- /accordion-group -->
 
     <div class="accordion-group">
-      <!-- Cool Stuff -->
+      <!-- Personal Website -->
       <div class="accordion-heading">
         <p class="collapseLabel">
         <span class="label label-success">Active</span>
         </p>
         <a class="accordion-toggle"
-           id="togglePersonProj3"
+           id="togglePersonProj"
            data-toggle="collapse"
            data-parent="#accordionPersonProj"
-           href="#collapsePersonProj3">Cool Stuff</a>
+           href="#collapsePersonProj1">Personal Website</a>
       </div>
-      <div id="collapsePersonProj3" class="accordion-body collapse">
+      <div id="collapsePersonProj1" class="accordion-body collapse">
         <div class="accordion-inner">
           <!-- Project Description -->
-          <p>
-          <strong>Interesting</strong> tidbits of code are what this repository contains.
-          I started this project as I wanted to record the not-so-obvious stuff that
-          I've come across in programming (mainly C or C++).
-          It turned out to be quite useful as
-          I often refer back to it for my other projects.
-          </p>
-          <p>
-          <strong>My favorites</strong> are
-          <code>Type Erasure</code>, <code>Static Type ID</code>
-          and <code>EnableIf</code> through
-          template meta-programming in C++.
-          Strict-aliasing and <code>restrict</code> keyword optimization in C
-          are also very interesting as they demonstrate how compilers optimize
-          at the assembly level.
-          Also, there is a fun demo of a LFSR pseudo-random generator.
-          </p>
-          <p>
-          For more information, refer to the project page
-          <a href="https://github.com/BeyondSora/Cool-Stuff" target="_blank">here</a>.
-          </p>
+          <p>This is a placeholder.</p>
+          <p>This is a placeholder.</p>
+          <p>This is a placeholder.</p>
         </div>
       </div>
     </div> <!-- /accordion-group -->
